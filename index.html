@@ -3,22 +3,29 @@
   <title>WebAR sample</title>
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
   <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.1.7/aframe/build/aframe-ar.js"></script>
-  
 </head>
-
-<body style="margin: 0px; overflow : hidden;">
+<style>
+  .box {
+    border: 2px solid aliceblue; /* Add a border for the box */
+    padding: 0%; /* Add padding for some space around the content */
+    width: 100%; /* Set a specific width for the box */
+    margin: 0%; /* Add margin for some space between boxes */
+    background-color: aliceblue;
+  }
+</style>
+<body style="margin: 0px; overflow: hidden">
   <a-scene
-    vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;"
-    embedded arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled:
-    false;" >
-    <a-marker
-      type="pattern"
-      url="/Assests/pattern-hiro.patt"
-      emitevent="true"
-      id="marker"
-    >
-      <a-box position="0 0.5" color="red"></a-box>
-    </a-marker>
+    vr-mode-ui="enabled: false;"
+    renderer="logarithmicDepthBuffer: true;"
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled:
+    false;"
+  >
+    <div class="box">
+      <h2 style="color: black; text-align: center">Welcome to the site</h2>
+    </div>
+
+    <a-box position="0 0.5" color="red"></a-box>
     <a-entity camera></a-entity>
   </a-scene>
 </body>
