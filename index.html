@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+  <title>WebAR sample</title>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.1.7/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body>
+  <a-scene
+    vr-mode-ui="enabled: false;"
+    renderer="logarithmicDepthBuffer: true;"
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+  >
+    <a-marker
+      type="pattern"
+      url="/Assests/pattern-hiro.patt"
+      emitevent="true"
+      id="marker"
+    >
+      <a-box position="0 0.5" colour="red"></a-box>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
